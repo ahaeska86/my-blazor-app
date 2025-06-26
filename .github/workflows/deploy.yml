@@ -17,7 +17,9 @@ jobs:
         dotnet-version: 8.0.x
         
     - name: Publish .NET Project
-      run: dotnet publish FinancialModelingApp.csproj -c Release -o release --nologo
+      run: |
+        ls -la
+        dotnet publish -c Release -o release --nologo
       
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
